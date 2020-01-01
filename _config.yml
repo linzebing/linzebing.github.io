@@ -1,10 +1,9 @@
-title: Your awesome title
-author: GitHub User
-email: your-email@domain.com
+title: Zebing Lin's blog
+author: Zebing Lin
+email: linzebing1995@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This site documents some learnings from tech, long distance endurance sports,
+  and other parts of my life.
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -12,21 +11,20 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Adam Denisov
-  tagline: Developer. Designer
+  name: Zebing Lin
+  tagline: Developer. Triathlete.
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
+    github:  linzebing
+    linkedIn: in/linzebing
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
-    # instagram: jekyll
+    instagram: zebinglin
     # linkedin: jekyll
     # pinterest: jekyll
     # youtube: jekyll
@@ -50,6 +48,7 @@ plainwhite:
 
 # Build settings
 theme: plainwhite
+remote_theme: thelehhman/plainwhite-jekyll
 
 plugins:
   - jekyll-seo-tag
