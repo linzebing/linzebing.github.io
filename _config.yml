@@ -52,7 +52,7 @@ theme: plainwhite
 remote_theme: thelehhman/plainwhite-jekyll
 
 # Disqus settings（https://disqus.com/）
-disqus_shortname: disqus_bWnkcQiSpR
+disqus_shortname: linzebing
 
 plugins:
   - jekyll-seo-tag
