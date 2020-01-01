@@ -51,6 +51,9 @@ plainwhite:
 theme: plainwhite
 remote_theme: thelehhman/plainwhite-jekyll
 
+# Disqus settings（https://disqus.com/）
+disqus_username: disqus_bWnkcQiSpR
+
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
