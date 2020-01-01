@@ -11,6 +11,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
+  analytics_id: 72802677
   name: Zebing Lin
   tagline: Developer. Triathlete.
   date_format: "%b %-d, %Y"
@@ -20,11 +21,11 @@ plainwhite:
   social_links:
     github:  linzebing
     linkedIn: in/linzebing
+    instagram: zebinglin
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
-    instagram: zebinglin
     # linkedin: jekyll
     # pinterest: jekyll
     # youtube: jekyll
