@@ -5,7 +5,6 @@ date:   2018-08-07 21:03:36 +0530
 categories: paper-reading codegen vldb
 ---
 
-## Summary
 Nowadays query performance is more determined by the raw CPU costs instead of I/O as memory grows. The classical iterator style query processing technique is very simple and flexible, but shows poor performance on modern CPUs due to lack of locality and frequent instruction mispredictions.
 
 This work presents a strategy that translates a query into compact and efficient machine code using LLVM. Aiming at good code and data locality and predictable branch layout, the resulting code rivals the performance of handwritten C++ code with modest compilation time.
