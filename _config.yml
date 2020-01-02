@@ -11,6 +11,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
+  disqus_shortname: zebingl
   analytics_id: 72802677
   name: Zebing Lin
   tagline: Developer. Triathlete.
@@ -41,7 +42,7 @@ plainwhite:
     # - username: jekyll2
     #   instance: example.com
     # Disqus settings（https://disqus.com/）
-    disqus_shortname: zebingl
+
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
