@@ -5,14 +5,13 @@ date:   2018-08-07 21:03:36 +0530
 categories: paper-reading codegen vldb
 ---
 
-[Paper](http://15721.courses.cs.cmu.edu/spring2018/papers/03-compilation/p539-neumann.pdf)
-
-[CMU lecture](https://www.youtube.com/watch?v=m7o9rw5HAA8&list=PLSE8ODhjZXjYplQRUlrgQKwIAV3es0U6t&index=3)
-
 ## Summary
+
 Nowadays query performance is more determined by the raw CPU costs instead of I/O as memory grows. The classical iterator style query processing technique is very simple and flexible, but shows poor performance on modern CPUs due to lack of locality and frequent instruction mispredictions.
 
 This work presents a strategy that translates a query into compact and efficient machine code using LLVM. Aiming at good code and data locality and predictable branch layout, the resulting code rivals the performance of handwritten C++ code with modest compilation time.
+
+[Paper](http://15721.courses.cs.cmu.edu/spring2018/papers/03-compilation/p539-neumann.pdf), [CMU lecture](https://www.youtube.com/watch?v=m7o9rw5HAA8&list=PLSE8ODhjZXjYplQRUlrgQKwIAV3es0U6t&index=3)
 
 ## Motivation
 Traditional query translation is processed in a volcano style: every physical algebraic operator conceptually produces a tuple stream from its input, and allows for iterating over this tuple stream by repeatedly calling the next function of the operator.

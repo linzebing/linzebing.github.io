@@ -5,12 +5,12 @@ date:   2018-07-22 21:03:36 +0530
 categories: paper-reading shuffle eurosys
 ---
 
-[Paper](https://dl.acm.org/doi/10.1145/3190508.3190534) [Presentation](https://databricks.com/session/sos-optimizing-shuffle-i-o)
-
 ## Summary
 Data transformations for grouping and joining data require all-to-all data transfers - called shuffle operations, are becoming the scaling bottleneck when running many small tasks in multi-stage data analytics jobs. The bottleneck is due to the superlinear increase in disk I/O operations as data volume increases.
 
 Riffle’s key idea is to merge fragmented intermediate shuffle files into larger block files, converting small random I/O to large sequential ones. This greatly improved Facebook’s  production Spark jobs’ number of shuffle I/O requests and end-to-end job completion time.
+
+[Paper](https://dl.acm.org/doi/10.1145/3190508.3190534), [Presentation](https://databricks.com/session/sos-optimizing-shuffle-i-o)
 
 ## Motivation
 Research work highly encourages running a large number of small tasks. Small tasks improve the parallelism, reduce the straggler effect with speculative execution, and speed up end-to-end job completion. However, this introduces significant I/O overhead during shuffle operations in multi-stage jobs.
