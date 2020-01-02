@@ -12,7 +12,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   disqus_shortname: zebingl
-  analytics_id: 72802677
+  analytics_id: UA-72802677-1
   name: Zebing Lin
   tagline: Developer. Triathlete.
   date_format: "%b %-d, %Y"
