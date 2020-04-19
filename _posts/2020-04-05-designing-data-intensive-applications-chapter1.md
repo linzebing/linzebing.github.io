@@ -8,7 +8,7 @@ Foundations of Data Systems
 
 ## Reliable, Scalable, and Maintainable Applications
 
-Fan-out: we use it to describe the number of requests to other services that we need in order to server one incoming
+Fan-out: we use it to describe the number of requests to other services that we need in order to serve one incoming
 request.
 
 Twitter uses a hybrid approach that delivers Tweets to its users. Most users' tweets are fanned out to home timelines
