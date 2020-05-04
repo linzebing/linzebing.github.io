@@ -15,44 +15,8 @@ A fourth advantage of static factories is that the class of the returned object 
 
 A fifth advantage of static factories is that the class of the returned object need not exist when the class containing the method is written.
 
-The main limitation of providing only static factory methods is that classes without public or protected constructors cannot be subclassed.
+The main limitation of providing only static factory methods is that classes without public or protected constructors cannot be subclassed. A second shortcoming of static factory methods is that they are hard for programmers to find.
 
-A second shortcoming of static factory methods is that they are hard for programmers to find.
-
-- from—A type-conversion method that takes a single parameter and returns a corresponding instance of this type, for example:
-```java
-Date d = Date.from(instant);
-```
-- of—An aggregation method that takes multiple parameters and returns an in- stance of this type that incorporates them, for example:
-```java
-Set<Rank> faceCards = EnumSet.of(JACK, QUEEN, KING);
-```
-- valueOf—A more verbose alternative to from and of, for example:
-```java
-BigInteger prime = BigInteger.valueOf(Integer.MAX_VALUE);
-```
-- instance or getInstance—Returns an instance that is described by its parameters (if any) but cannot be said to have the same value, for example:
-```java
-StackWalker luke = StackWalker.getInstance(options);
-```
-- create or newInstance—Like instance or getInstance, except that the
-method guarantees that each call returns a new instance, for example:
-```java
-Object newArray = Array.newInstance(classObject, arrayLen);
-```
-- getType—Like getInstance, but used if the factory method is in a different
-class. Type is the type of object returned by the factory method, for example:
-```java
-FileStore fs = Files.getFileStore(path);
-```
-- newType—Like newInstance, but used if the factory method is in a different class. Type is the type of object returned by the factory method, for example:
-```java
-BufferedReader br = Files.newBufferedReader(path);
-```
-- type—A concise alternative to getType and newType, for example:
-```java
-List<Complaint> litany = Collections.list(legacyLitany);
-```
 
 ## Consider a builder when faced with many constructor parameters
 ```java
@@ -93,3 +57,32 @@ public void leaveTheBuilding() { ... } }
 ```
 
 ## Enforce noninstantiability with a private constructor
+
+## Prefer dependency injection to hardwiring resources
+Pass the resource into the constructor when creating a new instance.
+
+## Avoid creating unnecessary objects
+For instance, `String.matches` internally creates a `Pattern` instance for the regular expression. We should reuse such `Pattern` instance for every invocation.
+
+Prefer primitives to boxed primitives, and watch out for unintentional autoboxing.
+
+## Eliminate obsolete object references
+Null out references once they become obsolete. Whenever a class manages its own memory, the programmer should be alert for memory leaks. Two other cases are caches and listeners with other callbacks.
+
+## Avoid finalizers and cleaners
+Never do anything time-critical in a finalizer or cleaner. Never depend on a finalizer or cleaner to update persistent state. There is _severe_ penalty for using finalizers and cleaners. Finalizers have a serious security problem: then open your class up to finalizer attacks.
+
+Just have your class implement _AutoCloseable_.
+
+## Prefer _try-with-resources_ to _try-finally_
+```java
+static void copy(String src, String dst) throws IOException {
+  try (InputStream in = new FileInputStream(src);
+       OutputStream out = new FileOutputStream(dst)) {
+         byte[] buf = new byte[BUFFER_SIZE];
+         int n;
+         while ((n = in.read(buf)) >= 0)
+           out.write(buf, 0, n);
+      }
+}
+```
