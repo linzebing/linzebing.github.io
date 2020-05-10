@@ -2,7 +2,6 @@
 layout: post
 title:  "[En][Paper Reading][VLDB ’11] Efficiently Compiling Efficient Query Plans for Modern Hardware"
 date:   2018-08-07 21:03:36 +0530
-categories: paper-reading codegen vldb
 ---
 
 Nowadays query performance is more determined by the raw CPU costs instead of I/O as memory grows. The classical iterator style query processing technique is very simple and flexible, but shows poor performance on modern CPUs due to lack of locality and frequent instruction mispredictions.

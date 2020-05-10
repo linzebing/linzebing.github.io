@@ -2,7 +2,6 @@
 layout: post
 title:  "[En][Paper Reading][EuroSys ’18] Riffle: Optimized Shuffle Service for Large-Scale Data Analytics"
 date:   2018-07-22 21:03:36 +0530
-categories: paper-reading shuffle eurosys
 ---
 
 Data transformations for grouping and joining data require all-to-all data transfers - called shuffle operations, are becoming the scaling bottleneck when running many small tasks in multi-stage data analytics jobs. The bottleneck is due to the superlinear increase in disk I/O operations as data volume increases.
