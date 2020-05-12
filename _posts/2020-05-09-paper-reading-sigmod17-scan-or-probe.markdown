@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[En][Learning][Sigmod '17] Access Path Selection in Main-Memory Optimized
+title:  "[En][Paper Reading][Sigmod '17] Access Path Selection in Main-Memory Optimized
 Data Systems: Should I Scan or Should I Probe?"
 date:   2020-05-09 21:03:36 +0530
 ---
