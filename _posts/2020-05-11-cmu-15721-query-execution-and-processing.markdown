@@ -45,6 +45,10 @@ Each operator processes its input all at once and then emits its output all at o
 - The DBMS can push down hints to avoid scanning too many tuples.
 - Can send either a materialized row or a single column.
 
+<p align="center">
+  <img src="/assets/pictures/15721-execution/materialization.png">
+</p>
+
 1. Lower execution/coordination overhead.
 2. Fewer function calls.
 
@@ -52,6 +56,10 @@ Not good for OLAP queries with large immediate results.
 
 ### Vectorized/Batch Model
 Like iterator model, but each operator emits a batch of tuples instead of a single tuple. The operator's internal loop processes multiple tuples at a time.
+
+<p align="center">
+  <img src="/assets/pictures/15721-execution/vectorization.png">
+</p>
 
 Ideal for OLAP queries because it greatly reduces the number of invocations per operator. Allows for operators to use SIMD instructions.
 
