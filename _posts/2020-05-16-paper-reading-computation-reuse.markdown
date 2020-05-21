@@ -22,7 +22,7 @@ The goal is to alow users to write their jobs just as before, i.e., with zero ch
 
 First, we present detailed analysis of the computation reuse opportunity in our production clusters to get a sense of magnitude of the problem and the expected gains. Overlaps often occur at shuffle boundaries.
 
-To enable computation reuse over recurring jjobs, key idea is to use a combination of normalized and precise hashed (called _signatures_) for computation subgraphs.
+To enable computation reuse over recurring jobs, key idea is to use a combination of normalized and precise hashed (called _signatures_) for computation subgraphs.
 
 The CLOUDVIEWS analyzer captures the set of interesting computations to reuse based on their prior runs, plugs in custom view selection methods to select the view to materialize given a set of constraints, picks the physical design for the materialized views, and also determines the expiry of each of the materialized views.
 
@@ -73,3 +73,6 @@ Note that view materialization can slow down queries because:
 
 ## Lessons learned
 CLOUDVIEWS analyzer can be used as an offline tool. SLA-sensitive jobs can opt-out. We can pick the best physical design and reuse! Users don't need to worry. Better reliability too --- materilization can act as checkpointing. Input data change invalidates the data.
+
+
+The author has a [poster](https://people.cs.umass.edu/~aroy/sparkcruise-vldb19.pdf) in VLDB '19, which shares a similar spirit: with an offline analyzer extract materialization candidates, logs the recurring and strict signatures, and adds two rules: _Online Materialization_ and _Computation Reuse_.
