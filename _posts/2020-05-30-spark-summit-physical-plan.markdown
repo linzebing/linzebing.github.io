@@ -15,9 +15,5 @@ Created, analyzed and optimized.
 
 ## Physical Planning
 A bridge bewteen logical plan and rdd. It's a tree, contains specific description of how things should happen (specific choice of algorithms).
-
-### EnsureRequirements
-- outputPartitioning
-- outputOrdering
-- requiredChildDistribution
-- requiredChildOrdering
+- ReuseExchange allows to reduce I/O and network cost
+- EnsureRequirements adds Exchange
