@@ -34,7 +34,7 @@ CPU: Allows compilers to produce efficient loop-pipelined code
 ### Query Language
 Departed from the column-at-a-time MIL language so that relational operators can process vectors of multiple columns at the same time, allowing to use a vector produced by one expression as the input to another, while the data is in the CPU cache.
 
-Execution proceeds using Volcano-like pipelining, on the granularity of a vector. Column-wise vector layout allows for aggressive loop pipelining. Compound primitives only need to load/store at dges of the expression graph: results from one calculation are passed via a CPU register to the next calculation.
+Execution proceeds using Volcano-like pipelining, on the granularity of a vector. Column-wise vector layout allows for aggressive loop pipelining. Compound primitives only need to load/store at edges of the expression graph: results from one calculation are passed via a CPU register to the next calculation.
 
 Vertical storage has the disadvantage of increasing update cost. In MonetDB, updates go to delta structures instead. An advantage of vertical storage is that queries that access many tuples but not all columns save bandwidth (both RAM and I/O). We can further use light-weight compression.
 
