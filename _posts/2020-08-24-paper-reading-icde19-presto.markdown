@@ -22,7 +22,7 @@ A single coordinator node and one or more worker nodes. Coordinator responsible 
 
 ![](/assets/pictures/presto/arch.png)
 
-The client sends an HTTP request containing a SQL state- ment to the coordinator. The coordinator processes the request by evaluating queue policies, parsing and analyzing the SQL text, creating and optimizing distributed execution plan.
+The client sends an HTTP request containing a SQL statement to the coordinator. The coordinator processes the request by evaluating queue policies, parsing and analyzing the SQL text, creating and optimizing distributed execution plan.
 
 The coordinator distributes this plan to workers, starts exe- cution of tasks and then begins to enumerate splits, which are opaque handles to an addressable chunk of data in an external storage system. Splits are assigned to the tasks responsible for reading this data.
 
