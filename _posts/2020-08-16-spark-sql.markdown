@@ -6,7 +6,7 @@ date:   2020-08-16 21:03:36 +0530
 
 Unresolved LogicalPlan -> Analyzed LogicalPlan -> Optimized LogicalPlan -> Iterator[PhysicalPlan] -> SparkPlan -> Prepared SparkPlan
 
-# Catalyst
+## Spark SQL执行全过程
 InternalRow用来表示一行行数据的类。
 - BaseGenericRow 抽象类，实现了InternalRow中定义的所有get类型方法
 - JoinedRow 两个InternalRow放在一起形成新的InternalRow
@@ -29,3 +29,16 @@ Expression
 - semanticEquals 判断语义上是否等价
 
 ![](/assets/pictures/spark-sql/expression.png)
+
+## Spark SQL逻辑计划
+字符串形态的SQL语句转换为树形态的逻辑算子树，SQL中所包含的各种处理逻辑（过滤、剪裁等）和数据信息都会被整合在逻辑算子树的不同节点中。本质是一种中间过程表示，与Spark平台无关，后续阶段会被进一步映射为可执行的物理计划。
+
+![](/assets/pictures/spark-sql/logicalplan.png)
+
+### QueryPlan概述
+- 输入输出： QueryPlan
+- 基本属性：
+- 字符串
+
+### Catalog体系分析
+Spark SQL系统中，Catalog主要用于各种函数资源信息和元数据信息的统一管理。
