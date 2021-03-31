@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "[En][Learning][CMU 15721] Database Compression & Storage Layout"
+date:   2020-12-14 21:03:36 +0530
+---
+
 I/O is the main bottlenecks if the DBMS has to fetch data from disk. Key trade-off is __speed__ vs. __compression ratio__
 
 #### Database Compression

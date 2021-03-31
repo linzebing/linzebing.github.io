@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Spark SQL内核剖析(1)"
+date:   2020-10-16 21:03:36 +0530
+---
+
 DataFrame和RDD相比多了数据特性，拥有Schema信息；而Dataset进一步提供了类型安全和面向对象的编程接口。
 
 ---------

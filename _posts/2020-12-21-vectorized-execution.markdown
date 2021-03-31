@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "[En][Learning][CMU 15721] Vectorized Execution and Vectorization vs. Codegen"
+date:   2020-12-21 21:03:36 +0530
+---
+
 SIMD advantages: Significant performance gains and resource utilization if an algorithm can be vectorized
 SIMD disadvantages: Implementing an algorithm using SIMD is mostly a manual progress; SIMD may have restrictions on data alignment; Gathering data into SIMD registers and scattering it to the correct locations is tricky and/or inefficient
 

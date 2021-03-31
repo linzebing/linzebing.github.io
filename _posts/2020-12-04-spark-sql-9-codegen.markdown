@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Spark SQL内核剖析(5) Codegen"
+date:   2020-12-04 21:03:36 +0530
+---
+
 ## Cache-aware computation
 Tungsten cache-aware computation通过设计缓存友好的数据结构来提高cache hit和cache locality，主要针对排序。常规做法每个record有一个指针指向该record，直接访问实际数据的话都是memory random access，cache locality很差。缓存友好的方式是把key的前缀和record指针放在一起。
 ![](https://linzebing.github.io/assets/pictures/spark-sql/cache-aware.png)

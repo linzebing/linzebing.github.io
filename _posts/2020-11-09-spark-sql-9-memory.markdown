@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Spark SQL内核剖析(4) 内存管理"
+date:   2020-10-30 21:03:36 +0530
+---
+
 Tungsten旨在从内存和CPU层面对Spark的性能进行优化，主要包括3个方面：memory management and binary processing, cache-aware computation, code generation.
 
 ## 内存管理与二进制处理

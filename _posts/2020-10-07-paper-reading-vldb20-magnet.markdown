@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[En][Paper Reading][VLDB ’20] Magnet: Push-based Shuffle Service for Lareg-scale Data Processing"
-date:   2018-10-07 21:03:36 +0530
+date:   2020-10-07 21:03:36 +0530
 ---
 
 ## Introduction

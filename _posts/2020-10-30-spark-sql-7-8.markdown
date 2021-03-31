@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Spark SQL内核剖析(3) Memory Management"
+date:   2020-10-30 21:03:36 +0530
+---
+
 ```SQL
 select id, count(name) from student group by id
 ```

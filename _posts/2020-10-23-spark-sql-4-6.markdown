@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Spark SQL内核剖析(2)"
+date:   2020-10-23 21:03:36 +0530
+---
+
 ## Logical Plan
 在Spark SQL系统中，Catalog主要用于管理各种函数信息和元数据信息（数据库、数据表、数据视图、数据分区与函数等）的统一管理。包含：
 
