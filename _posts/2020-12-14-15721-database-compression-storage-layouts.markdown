@@ -42,5 +42,6 @@ __Disadvantage__:
 __Advantage__:
 - Reduces the amount wasted work because the DBMS only reads the data that it needs
 - Better compression
+
 __Disadvantage__:
 - Slow for point queries, inserts, updates, and deletes because of tuple splitting/stitching

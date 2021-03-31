@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spark SQL内核剖析(3) Memory Management"
+title:  "Spark SQL内核剖析(3)"
 date:   2020-10-30 21:03:36 +0530
 ---
 
